@@ -1,0 +1,51 @@
+/* Asegura que el cuerpo y la página ocupen toda la pantalla */
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Contenedor principal */
+  .container {
+    flex: 1; /* Empuja el footer hacia abajo */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  /* Título principal */
+  header h1 {
+    font-size: 6rem; /* Tamaño más grande */
+    color: #2e2e2e;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  /* Botón de Google Maps */
+  .btn-maps {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #2e2e2e;
+    color: #fff;
+    font-size: 1.2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+  }
+  
+  .btn-maps:hover {
+    background-color: #444; /* Efecto de hover */
+  }
+  
+  /* Pie de página */
+  .footer {
+    text-align: center;
+    font-size: 0.85rem; /* Tamaño discreto */
+    color: #777;
+    padding: 15px 0;
+  }
+  
