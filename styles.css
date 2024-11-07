@@ -5,47 +5,110 @@ body, html {
     display: flex;
     flex-direction: column;
     font-family: Arial, sans-serif;
-  }
+}
   
-  /* Contenedor principal */
-  .container {
-    flex: 1; /* Empuja el footer hacia abajo */
+/* Contenedor principal */
+.container {
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-  }
+    padding: 20px;
+    padding-bottom: 60px;
+}
   
-  /* Título principal */
-  header h1 {
-    font-size: 6rem; /* Tamaño más grande */
+/* Título principal */
+header h1 {
+    font-size: 6rem;
     color: #2e2e2e;
     font-weight: bold;
     margin-bottom: 20px;
-  }
-  
-  /* Botón de Google Maps */
-  .btn-maps {
-    display: inline-block;
-    padding: 10px 20px;
+}
+
+/* Media query para ajustar el tamaño del título en pantallas pequeñas */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 3rem;
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+}
+
+/* Contenedor para los botones */
+.buttons-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 300px;
+}
+
+/* Estilo común para ambos botones */
+.btn-maps {
+    display: block;
+    width: 100%;
+    padding: 12px 20px;
     background-color: #2e2e2e;
     color: #fff;
     font-size: 1.2rem;
     text-decoration: none;
     border-radius: 5px;
-    margin-top: 20px;
-  }
-  
-  .btn-maps:hover {
-    background-color: #444; /* Efecto de hover */
-  }
-  
-  /* Pie de página */
-  .footer {
     text-align: center;
-    font-size: 0.85rem; /* Tamaño discreto */
-    color: #777;
-    padding: 15px 0;
-  }
+}
+
+/* Contenedor para alinear icono y texto */
+.btn-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.btn-maps:hover {
+    background-color: #444;
+}
+
+.btn-icon {
+    flex-shrink: 0; /* Evita que el icono se encoja */
+    width: 24px;
+    height: 24px;
+}
+
+/* Media query para ajustar el tamaño del botón en pantallas pequeñas */
+@media (max-width: 480px) {
+    .btn-maps {
+        font-size: 1rem;
+        padding: 10px 15px;
+    }
+    
+    .btn-icon {
+        width: 20px;
+        height: 20px;
+    }
+}
   
+/* Pie de página */
+.footer {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #777;
+    padding: 15px;
+}
+
+/* Media query para ajustar el pie de página en pantallas pequeñas */
+@media (max-width: 480px) {
+    .footer {
+        font-size: 0.75rem;
+        padding: 10px;
+    }
+}
