@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Página no encontrada</title>
+    <style>
+        :root {
+            --bg-color: #f5f7fa;
+            --text-color: #2d3436;
+            --button-bg: #0984e3;
+            --button-hover: #0765b3;
+            --button-text: white;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-color: #2d3436;
+                --text-color: #f5f7fa;
+                --button-bg: #74b9ff;
+                --button-hover: #0984e3;
+                --button-text: #2d3436;
+            }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .error-code {
+            font-size: 8rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            line-height: 1;
+        }
+
+        .home-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background-color: var(--button-bg);
+            color: var(--button-text);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-top: 2rem;
+        }
+
+        .home-button:hover {
+            background-color: var(--button-hover);
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 480px) {
+            .error-code {
+                font-size: 6rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="error-code">404</div>
+        <a href="/" class="home-button">Volver al Inicio</a>
+    </div>
+
+    <script>
+        // Ajustar colores basado en la hora del día
+        function updateTheme() {
+            const hour = new Date().getHours();
+            const isNight = hour < 6 || hour >= 18; // Noche entre 6pm y 6am
+            
+            document.documentElement.style.setProperty(
+                '--bg-color', 
+                isNight ? '#2d3436' : '#f5f7fa'
+            );
+            document.documentElement.style.setProperty(
+                '--text-color', 
+                isNight ? '#f5f7fa' : '#2d3436'
+            );
+            document.documentElement.style.setProperty(
+                '--button-bg', 
+                isNight ? '#74b9ff' : '#0984e3'
+            );
+            document.documentElement.style.setProperty(
+                '--button-hover', 
+                isNight ? '#0984e3' : '#0765b3'
+            );
+            document.documentElement.style.setProperty(
+                '--button-text', 
+                isNight ? '#2d3436' : 'white'
+            );
+        }
+
+        // Actualizar el tema al cargar
+        updateTheme();
+
+        // Actualizar el tema cada hora
+        setInterval(updateTheme, 3600000);
+    </script>
+</body>
+</html>
