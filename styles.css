@@ -1,67 +1,91 @@
+/* ===== Estilos base ===== */
 body, html {
-    height: 100%;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  background: linear-gradient(135deg, #f9f9f9, #eceff1);
+  color: #2e2e2e;
+  display: flex;
+  flex-direction: column;
 }
 
+/* ===== Contenedor ===== */
 .container {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
 }
 
+/* ===== Header ===== */
 header h1 {
-    font-size: 8vw;
-    color: #2e2e2e;
-    font-weight: bold;
-    margin-bottom: 25px;
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 8px;
 }
 
+.subtitle {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+/* ===== Botones ===== */
 .buttons-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 15px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .btn-action {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 220px;
-    height: 50px;
-    background-color: #007bff;
-    color: #fff;
-    font-size: 1rem;
-    text-decoration: none;
-    border-radius: 8px;
-    transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 230px;
+  height: 55px;
+  background: #007bff;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+}
+
+.btn-action.secondary {
+  background: #2ca5e0;
+  box-shadow: 0 4px 10px rgba(44, 165, 224, 0.2);
 }
 
 .btn-action:hover {
-    background-color: #0056b3;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
 }
 
 .btn-content {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .btn-icon {
-    width: 20px;
-    height: 20px;
+  width: 22px;
+  height: 22px;
 }
 
+/* ===== Footer ===== */
 .footer {
-    text-align: center;
-    font-size: 0.85rem;
-    color: #555;
-    padding: 15px 0;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #555;
+  padding: 18px 0;
+  border-top: 1px solid #ddd;
+  background: #fafafa;
 }
