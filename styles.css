@@ -50,7 +50,7 @@ header h1 {
   width: 230px;
   height: 55px;
   background: #007bff;
-D color: #fff;
+  color: #fff;
   font-size: 1rem;
   font-weight: 500;
   text-decoration: none;
@@ -88,16 +88,4 @@ D color: #fff;
   padding: 18px 0;
   border-top: 1px solid #ddd;
   background: #fafafa;
-}
-
-/* ===== Estilos del Hashtag (NUEVO) ===== */
-.hashtag-promo {
-  font-weight: 500;
-  margin-top: 0;
-  margin-bottom: 8px; /* Añade espacio entre el hashtag y el copyright */
-  color: #333; /* Un gris un poco más oscuro */
-}
-
-.hashtag-promo strong {
-  color: #007bff; /* Usa el color azul principal */
 }
