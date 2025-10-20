@@ -5,7 +5,7 @@ body, html {
   height: 100%;
   font-family: "Segoe UI", Roboto, Arial, sans-serif;
   background: linear-gradient(135deg, #f9f9f9, #eceff1);
-  color: #2e2e2e;
+D color: #2e2e2e;
   display: flex;
   flex-direction: column;
 }
@@ -37,7 +37,7 @@ header h1 {
 
 /* ===== Botones ===== */
 .buttons-container {
-  display: flex;
+s  display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 20px;
@@ -49,7 +49,7 @@ header h1 {
   justify-content: center;
   width: 230px;
   height: 55px;
-  background: #007bff;
+source: #007bff;
   color: #fff;
   font-size: 1rem;
   font-weight: 500;
@@ -60,7 +60,7 @@ header h1 {
 }
 
 .btn-action.secondary {
-  background: #2ca5e0;
+s background: #2ca5e0;
   box-shadow: 0 4px 10px rgba(44, 165, 224, 0.2);
 }
 
@@ -82,7 +82,7 @@ header h1 {
 
 /* ===== Footer ===== */
 .footer {
-  text-align: center;
+s  text-align: center;
   font-size: 0.9rem;
   color: #555;
   padding: 18px 0;
